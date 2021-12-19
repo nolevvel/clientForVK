@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		66C21AED276A1A3300F4FD5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AEC276A1A3300F4FD5B /* AppDelegate.swift */; };
 		66C21AEF276A1A3300F4FD5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AEE276A1A3300F4FD5B /* SceneDelegate.swift */; };
-		66C21AF1276A1A3300F4FD5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AF0276A1A3300F4FD5B /* ViewController.swift */; };
+		66C21AF1276A1A3300F4FD5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AF0276A1A3300F4FD5B /* LoginViewController.swift */; };
 		66C21AF4276A1A3300F4FD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C21AF2276A1A3300F4FD5B /* Main.storyboard */; };
 		66C21AF6276A1A3500F4FD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C21AF5276A1A3500F4FD5B /* Assets.xcassets */; };
 		66C21AF9276A1A3500F4FD5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C21AF7276A1A3500F4FD5B /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		66C21AE9276A1A3300F4FD5B /* clientForVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientForVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C21AEC276A1A3300F4FD5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C21AEE276A1A3300F4FD5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66C21AF0276A1A3300F4FD5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66C21AF0276A1A3300F4FD5B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		66C21AF3276A1A3300F4FD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66C21AF5276A1A3500F4FD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C21AF8276A1A3500F4FD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				66C21AEC276A1A3300F4FD5B /* AppDelegate.swift */,
 				66C21AEE276A1A3300F4FD5B /* SceneDelegate.swift */,
-				66C21AF0276A1A3300F4FD5B /* ViewController.swift */,
+				66C21AF0276A1A3300F4FD5B /* LoginViewController.swift */,
 				66C21AF2276A1A3300F4FD5B /* Main.storyboard */,
 				66C21AF5276A1A3500F4FD5B /* Assets.xcassets */,
 				66C21AF7276A1A3500F4FD5B /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66C21AF1276A1A3300F4FD5B /* ViewController.swift in Sources */,
+				66C21AF1276A1A3300F4FD5B /* LoginViewController.swift in Sources */,
 				66C21AED276A1A3300F4FD5B /* AppDelegate.swift in Sources */,
 				66C21AEF276A1A3300F4FD5B /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AHZVP6ST35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clientForVK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AHZVP6ST35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = clientForVK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
