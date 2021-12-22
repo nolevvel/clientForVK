@@ -13,6 +13,10 @@
 		66C21AF4276A1A3300F4FD5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C21AF2276A1A3300F4FD5B /* Main.storyboard */; };
 		66C21AF6276A1A3500F4FD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C21AF5276A1A3500F4FD5B /* Assets.xcassets */; };
 		66C21AF9276A1A3500F4FD5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C21AF7276A1A3500F4FD5B /* LaunchScreen.storyboard */; };
+		66EAAD662773DB540068B039 /* MyFriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAAD652773DB540068B039 /* MyFriendsTableVC.swift */; };
+		66EAAD682773DBCF0068B039 /* MyGroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAAD672773DBCF0068B039 /* MyGroupsTableVC.swift */; };
+		66EAAD6A2773DC710068B039 /* FriendCardCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAAD692773DC710068B039 /* FriendCardCollectionVC.swift */; };
+		66EAAD6C2773DCCA0068B039 /* GroupDetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EAAD6B2773DCCA0068B039 /* GroupDetailTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		66C21AF5276A1A3500F4FD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C21AF8276A1A3500F4FD5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C21AFA276A1A3500F4FD5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66EAAD652773DB540068B039 /* MyFriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableVC.swift; sourceTree = "<group>"; };
+		66EAAD672773DBCF0068B039 /* MyGroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyGroupsTableVC.swift; path = clientForVK/View/MyGroupsTableVC.swift; sourceTree = SOURCE_ROOT; };
+		66EAAD692773DC710068B039 /* FriendCardCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendCardCollectionVC.swift; path = clientForVK/View/FriendCardCollectionVC.swift; sourceTree = SOURCE_ROOT; };
+		66EAAD6B2773DCCA0068B039 /* GroupDetailTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GroupDetailTableVC.swift; path = clientForVK/View/GroupDetailTableVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +85,11 @@
 		66EAAD63277257A50068B039 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				66EAAD6B2773DCCA0068B039 /* GroupDetailTableVC.swift */,
+				66EAAD692773DC710068B039 /* FriendCardCollectionVC.swift */,
+				66EAAD672773DBCF0068B039 /* MyGroupsTableVC.swift */,
 				66C21AF0276A1A3300F4FD5B /* LoginViewController.swift */,
+				66EAAD652773DB540068B039 /* MyFriendsTableVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -163,8 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C21AF1276A1A3300F4FD5B /* LoginViewController.swift in Sources */,
+				66EAAD6C2773DCCA0068B039 /* GroupDetailTableVC.swift in Sources */,
 				66C21AED276A1A3300F4FD5B /* AppDelegate.swift in Sources */,
+				66EAAD682773DBCF0068B039 /* MyGroupsTableVC.swift in Sources */,
 				66C21AEF276A1A3300F4FD5B /* SceneDelegate.swift in Sources */,
+				66EAAD6A2773DC710068B039 /* FriendCardCollectionVC.swift in Sources */,
+				66EAAD662773DB540068B039 /* MyFriendsTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
