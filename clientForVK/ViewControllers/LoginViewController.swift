@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
         //print(passTextField.text)
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
@@ -50,6 +52,8 @@ class LoginViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
     }
+    
+    // MARK: - Actions
     
     @objc func keyboardWasShown(notification: Notification) {
         let info = notification.userInfo! as NSDictionary
@@ -90,5 +94,25 @@ class LoginViewController: UIViewController {
         self.scrollView?.endEditing(true)
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if !checkUser() {
+            presentAlert()
+            return false
+        } else {
+            return true
+        }
+    }
+    // MARK: - Private Methods
+    
+    private func checkUser() -> Bool {
+        userNameTextField.text == "1" && passTextField.text == "1"
+    }
+    
+    private func presentAlert() {
+        let alertController = UIAlertController(title: "Error", message: "Incorrect user or password", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Close", style: .cancel)
+        alertController.addAction(action)
+        present(alertController, animated: true)
+    }
 }
 
