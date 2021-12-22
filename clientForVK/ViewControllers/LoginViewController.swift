@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
         //print(passTextField.text)
     }
     
+    @IBAction func unwindToMain(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -95,11 +99,17 @@ class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if !checkUser() {
-            presentAlert()
+        switch identifier {
+        case "goToMain":
+            if !checkUser() {
+                presentAlert()
+                return false
+            } else {
+                clearData()
+                return true
+            }
+        default:
             return false
-        } else {
-            return true
         }
     }
     // MARK: - Private Methods
@@ -113,6 +123,11 @@ class LoginViewController: UIViewController {
         let action = UIAlertAction(title: "Close", style: .cancel)
         alertController.addAction(action)
         present(alertController, animated: true)
+    }
+    
+    private func clearData() {
+        userNameTextField.text = ""
+        passTextField.text = ""
     }
 }
 
