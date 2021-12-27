@@ -7,9 +7,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class FriendCardCollectionVC: UICollectionViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +18,10 @@ class FriendCardCollectionVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        self.collectionView.register(UINib(nibName: "FriendCardViewCell", bundle: nil), forCellWithReuseIdentifier: "friendCardViewCell")
+        // self.navigationItem.title =
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -37,17 +39,27 @@ class FriendCardCollectionVC: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        guard
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "friendCardViewCell", for: indexPath) as? FriendCardViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        
+
+            
+        
+        
+        cell.configure(photo: userPhoto)
     
         // Configure the cell
     
@@ -56,6 +68,10 @@ class FriendCardCollectionVC: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    //override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    //
+    //}
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

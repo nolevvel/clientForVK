@@ -9,14 +9,23 @@ import UIKit
 
 class MyGroupsTableVC: UITableViewController {
 
+    
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+        guard
+            segue.identifier == "addGroup",
+            let addNewGroupController = segue.source as? AddNewGroupTableVC,
+            let groupIndexPath = addNewGroupController.tableView.indexPathForSelectedRow,
+            !myGroups.contains(groups[groupIndexPath.row])
+        else { return }
+        myGroups.append(groups[groupIndexPath.row])
+        tableView.reloadData()
+    }
+    
+    // MARK: - Lifecircle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "GroupCell", bundle: nil), forCellReuseIdentifier: "groupCell")
     }
 
     // MARK: - Table view data source
@@ -27,19 +36,25 @@ class MyGroupsTableVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        myGroups.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath) as? GroupCell
+        else {
+            return UITableViewCell()
+        }
+        let currentGroup = myGroups[indexPath.row].groupName
+        let currentLogo = myGroups[indexPath.row].groupLogo
+        cell.configure(icon: currentLogo, name: currentGroup)
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        do {tableView.deselectRow(at: indexPath, animated: true)}
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -49,17 +64,15 @@ class MyGroupsTableVC: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            myGroups.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade) }
+    //    } else if editingStyle == .insert {
+    //        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    //    }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

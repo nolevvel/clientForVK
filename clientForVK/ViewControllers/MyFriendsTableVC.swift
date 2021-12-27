@@ -9,37 +9,47 @@ import UIKit
 
 class MyFriendsTableVC: UITableViewController {
 
+    
+
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "FriendCell", bundle: nil), forCellReuseIdentifier: "friendCell")
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        friends.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as? FriendCell
+        else {
+            return UITableViewCell()
+        }
+        let currentFriend = friends[indexPath.row].friendName
+        let currentAvatar = friends[indexPath.row].friendPhoto
+        cell.configure(icon: currentAvatar, name: currentFriend)
+       
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer {tableView.deselectRow(at: indexPath, animated: true)}
+        
+        performSegue(withIdentifier: "showFriendPhoto", sender: nil)
+        
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,14 +86,26 @@ class MyFriendsTableVC: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        guard
+            let destination = segue.destination as? FriendCardCollectionVC,
+       
+            segue.identifier == "showFriendPhoto",
+            let indexPath = tableView.indexPathForSelectedRow
+        else {
+            return
+        }
+        let currentFriend = friends[indexPath.row].friendName
+        destination.navigationItem.title = currentFriend
+        userPhoto = friends[indexPath.row].friendPhoto
+       
     }
-    */
+    
 
 }

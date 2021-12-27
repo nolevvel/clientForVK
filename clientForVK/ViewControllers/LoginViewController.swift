@@ -115,7 +115,7 @@ class LoginViewController: UIViewController {
     // MARK: - Private Methods
     
     private func checkUser() -> Bool {
-        userNameTextField.text == "1" && passTextField.text == "1"
+        userNameTextField.text == "" && passTextField.text == ""
     }
     
     private func presentAlert() {

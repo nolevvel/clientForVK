@@ -7,39 +7,44 @@
 
 import UIKit
 
-class GroupDetailTableVC: UITableViewController {
+class AddNewGroupTableVC: UITableViewController {
 
+    
+    
+    // MARK: - Lifecicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "GroupCell", bundle: nil), forCellReuseIdentifier: "groupCell")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        groups.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath) as? GroupCell
+        else {
+            return UITableViewCell()
+        }
+        let currentGroup = groups[indexPath.row].groupName
+        let curentGroupAvatar = groups[indexPath.row].groupLogo
+        cell.configure(icon: curentGroupAvatar, name: currentGroup)
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        defer {tableView.deselectRow(at: indexPath, animated: true)}
+        performSegue(withIdentifier: "addGroup", sender: nil)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
