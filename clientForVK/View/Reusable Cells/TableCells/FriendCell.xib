@@ -12,17 +12,17 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="43" id="eQS-V7-T4h" customClass="FriendCell" customModule="clientForVK" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQS-V7-T4h" id="DRW-Fg-pqe">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQS-V7-T4h" id="DRW-Fg-pqe">
                 <rect key="frame" x="0.0" y="0.0" width="385.5" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcG-xT-ok2">
-                        <rect key="frame" x="51" y="11" width="162.5" height="21"/>
+                        <rect key="frame" x="51" y="11" width="41.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-qR-XJK">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-qR-XJK">
                         <rect key="frame" x="4" y="4" width="35" height="35"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
                         <constraints>
@@ -33,7 +33,6 @@
                 <constraints>
                     <constraint firstItem="tcs-qR-XJK" firstAttribute="leading" secondItem="DRW-Fg-pqe" secondAttribute="leading" constant="4" id="6am-Rw-WO3"/>
                     <constraint firstItem="xcG-xT-ok2" firstAttribute="leading" secondItem="tcs-qR-XJK" secondAttribute="trailing" constant="12" id="LPr-vg-SD4"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xcG-xT-ok2" secondAttribute="trailing" constant="164" id="MNB-hI-5AU"/>
                     <constraint firstItem="tcs-qR-XJK" firstAttribute="top" secondItem="DRW-Fg-pqe" secondAttribute="top" constant="4" id="QOR-uL-CAv"/>
                     <constraint firstItem="xcG-xT-ok2" firstAttribute="centerY" secondItem="DRW-Fg-pqe" secondAttribute="centerY" id="Vvl-96-HlW"/>
                     <constraint firstAttribute="bottom" secondItem="tcs-qR-XJK" secondAttribute="bottom" constant="4" id="hr0-IW-pJX"/>

@@ -55,10 +55,6 @@ class FriendCardCollectionVC: UICollectionViewController {
             return UICollectionViewCell()
         }
         
-
-            
-        
-        
         cell.configure(photo: userPhoto)
     
         // Configure the cell

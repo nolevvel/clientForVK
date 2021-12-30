@@ -16,38 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JND-UC-16A">
-                                <rect key="frame" x="92" y="320" width="230" height="70"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is LaunchScreen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSc-Dk-wlH">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There will be a LOGO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GF-HW-LNt">
-                                        <rect key="frame" x="0.0" y="40" width="230" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk" translatesAutoresizingMaskIntoConstraints="NO" id="b5W-3S-8kF">
+                                <rect key="frame" x="20" y="200" width="374" height="215"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="JND-UC-16A" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BNR-Rf-9Iy"/>
-                            <constraint firstItem="JND-UC-16A" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="320" id="xIZ-7y-3Ca"/>
+                            <constraint firstAttribute="trailing" secondItem="b5W-3S-8kF" secondAttribute="trailing" constant="20" id="bIP-bg-2j0"/>
+                            <constraint firstItem="b5W-3S-8kF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="200" id="pW7-z9-RkL"/>
+                            <constraint firstItem="b5W-3S-8kF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="zt2-0M-IOt"/>
+                            <constraint firstItem="b5W-3S-8kF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zuS-AC-5Xf"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="vk" width="930" height="215"/>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

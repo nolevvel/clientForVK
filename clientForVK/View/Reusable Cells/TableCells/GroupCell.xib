@@ -16,19 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvT-n4-rmV">
-                        <rect key="frame" x="51" y="11" width="179" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="alV-El-R4I">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="alV-El-R4I">
                         <rect key="frame" x="4" y="4" width="35" height="35"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="alV-El-R4I" secondAttribute="height" id="DPl-GI-pMy"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvT-n4-rmV">
+                        <rect key="frame" x="51" y="11" width="41.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="alV-El-R4I" firstAttribute="top" secondItem="eXb-rI-1Dj" secondAttribute="top" constant="4" id="6i4-aV-XDm"/>
@@ -36,14 +36,13 @@
                     <constraint firstItem="XvT-n4-rmV" firstAttribute="centerY" secondItem="eXb-rI-1Dj" secondAttribute="centerY" id="M4U-mF-DQI"/>
                     <constraint firstItem="alV-El-R4I" firstAttribute="leading" secondItem="eXb-rI-1Dj" secondAttribute="leading" constant="4" id="OQU-68-2xE"/>
                     <constraint firstItem="XvT-n4-rmV" firstAttribute="leading" secondItem="alV-El-R4I" secondAttribute="trailing" constant="12" id="arb-D3-iUv"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="XvT-n4-rmV" secondAttribute="trailing" constant="164" id="rzo-Ua-D6K"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="groupIcon" destination="alV-El-R4I" id="fhI-IQ-oVQ"/>
                 <outlet property="groupName" destination="XvT-n4-rmV" id="kd3-DB-9Ge"/>
             </connections>
-            <point key="canvasLocation" x="139" y="37"/>
+            <point key="canvasLocation" x="137.68115942028987" y="36.495535714285715"/>
         </tableViewCell>
     </objects>
     <resources>

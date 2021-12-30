@@ -14,11 +14,11 @@ struct GroupModel : Equatable{
     
 }
 
-var sng = GroupModel(groupName: "SNG", groupLogo: UIImage(systemName: "rectangle.3.group.fill") ?? UIImage())
-var opek = GroupModel(groupName: "OPEK", groupLogo: UIImage(systemName: "rectangle.3.group.fill") ?? UIImage())
-var nato = GroupModel(groupName: "NATO", groupLogo: UIImage(systemName: "rectangle.3.group.fill") ?? UIImage())
-var pingpong = GroupModel(groupName: "Ping-Pong", groupLogo: UIImage(systemName: "rectangle.3.group.fill") ?? UIImage())
-var russia = GroupModel(groupName: "Russia", groupLogo: UIImage(systemName: "rectangle.3.group.fill") ?? UIImage())
+var sng = GroupModel(groupName: "SNG", groupLogo: UIImage(named: "sng") ?? UIImage())
+var opek = GroupModel(groupName: "OPEK", groupLogo: UIImage(named: "opek") ?? UIImage())
+var nato = GroupModel(groupName: "NATO", groupLogo: UIImage(named: "nato") ?? UIImage())
+var pingpong = GroupModel(groupName: "Ping-Pong", groupLogo: UIImage(named: "pingpong") ?? UIImage())
+var russia = GroupModel(groupName: "Russia", groupLogo: UIImage(named: "russia") ?? UIImage())
 
 
 var groups = [sng, opek, nato, pingpong, russia]

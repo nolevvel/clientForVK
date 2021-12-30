@@ -12,6 +12,7 @@ import UIKit
 struct FriendModel {
     var friendName: String
     var friendPhoto: UIImage
+    var friendAvatar: UIImage
     var friendGender: gender
     var friendBirthday: String
 }
@@ -21,12 +22,11 @@ enum gender {
     case woman
 }
 
-var putin = FriendModel(friendName: "Putin Vladimir", friendPhoto: UIImage(systemName: "pencil") ?? UIImage(), friendGender: .man, friendBirthday: "07.10.1952")
-var medvedev = FriendModel(friendName: "Medvedev Dmitriy", friendPhoto: UIImage(systemName: "rectangle.and.pencil.and.ellipsis") ?? UIImage(), friendGender: .man, friendBirthday: "14.09.1965")
-var shoygu = FriendModel(friendName: "Shoygu Sergey", friendPhoto: UIImage(systemName: "lasso") ?? UIImage(), friendGender: .man, friendBirthday: "21.05.1955")
-var lavrov = FriendModel(friendName: "Lavrov Sergey", friendPhoto: UIImage(systemName: "trash.fill") ?? UIImage(), friendGender: .man, friendBirthday: "21.03.1950")
-var peskov = FriendModel(friendName: "Peskov Dmitriy", friendPhoto: UIImage(systemName: "archivebox") ?? UIImage(), friendGender: .man, friendBirthday: "17.10.1967")
+var putin = FriendModel(friendName: "Putin Vladimir", friendPhoto: UIImage(systemName: "pencil") ?? UIImage(), friendAvatar: UIImage(named: "putin") ?? UIImage(), friendGender: .man, friendBirthday: "07.10.1952")
+var medvedev = FriendModel(friendName: "Medvedev Dmitriy", friendPhoto: UIImage(systemName: "rectangle.and.pencil.and.ellipsis") ?? UIImage(), friendAvatar: UIImage(named: "medvedev") ?? UIImage(), friendGender: .man, friendBirthday: "14.09.1965")
+var shoygu = FriendModel(friendName: "Shoygu Sergey", friendPhoto: UIImage(systemName: "lasso") ?? UIImage(), friendAvatar: UIImage(named: "shoygu") ?? UIImage(), friendGender: .man, friendBirthday: "21.05.1955")
+var lavrov = FriendModel(friendName: "Lavrov Sergey", friendPhoto: UIImage(systemName: "trash.fill") ?? UIImage(), friendAvatar: UIImage(named: "lavrov") ?? UIImage(), friendGender: .man, friendBirthday: "21.03.1950")
+var peskov = FriendModel(friendName: "Peskov Dmitriy", friendPhoto: UIImage(systemName: "archivebox") ?? UIImage(), friendAvatar: UIImage(named: "peskov") ?? UIImage(), friendGender: .man, friendBirthday: "17.10.1967")
 
 var friends = [putin, medvedev, shoygu, lavrov, peskov]
 var userPhoto = UIImage()
-

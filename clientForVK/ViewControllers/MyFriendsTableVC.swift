@@ -10,6 +10,7 @@ import UIKit
 class MyFriendsTableVC: UITableViewController {
 
     
+    
 
     // MARK: - Lifecycle
     
@@ -35,7 +36,7 @@ class MyFriendsTableVC: UITableViewController {
             return UITableViewCell()
         }
         let currentFriend = friends[indexPath.row].friendName
-        let currentAvatar = friends[indexPath.row].friendPhoto
+        let currentAvatar = friends[indexPath.row].friendAvatar
         cell.configure(icon: currentAvatar, name: currentFriend)
        
 
