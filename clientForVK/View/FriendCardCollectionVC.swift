@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendCardCollectionVC: UICollectionViewController {
+class FriendCardCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
     
 
@@ -45,7 +45,7 @@ class FriendCardCollectionVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        userPhoto.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,8 +54,8 @@ class FriendCardCollectionVC: UICollectionViewController {
         else {
             return UICollectionViewCell()
         }
-        
-        cell.configure(photo: userPhoto)
+        let currentPhoto = userPhoto[indexPath.row]
+        cell.configure(photo: currentPhoto)
     
         // Configure the cell
     
@@ -64,6 +64,24 @@ class FriendCardCollectionVC: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    func collectionView(_ collectionView: UICollectionView,
+                         layout collectionViewLayout: UICollectionViewLayout,
+                         sizeForItemAt indexPath: IndexPath) -> CGSize {
+                         return CGSize(width: view.frame.width/3, height: view.frame.width/3)
+     }
+    
+     func collectionView(_ collectionView: UICollectionView,
+                         layout collectionViewLayout: UICollectionViewLayout,
+                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+                         return 0
+     }
+     
+     func collectionView(_ collectionView: UICollectionView,
+                         layout collectionViewLayout: UICollectionViewLayout,
+                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+                         return 0
+      }
+    
     //override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     //
     //}
