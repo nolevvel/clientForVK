@@ -14,6 +14,12 @@ struct GroupModel : Equatable{
     
 }
 
+//extension GroupModel: Equatable {
+//    static func == (lhs: Self, rhs: Self) -> Bool {
+//        lhs.groupName == rhs.groupName
+//    }
+//}
+
 var sng = GroupModel(groupName: "SNG", groupLogo: UIImage(named: "sng") ?? UIImage())
 var opek = GroupModel(groupName: "OPEK", groupLogo: UIImage(named: "opek") ?? UIImage())
 var nato = GroupModel(groupName: "NATO", groupLogo: UIImage(named: "nato") ?? UIImage())

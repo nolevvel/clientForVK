@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,21 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk" translatesAutoresizingMaskIntoConstraints="NO" id="b5W-3S-8kF">
-                                <rect key="frame" x="20" y="200" width="374" height="215"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-oK-vpE">
+                                <rect key="frame" x="20" y="0.0" width="335" height="667"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="b5W-3S-8kF" secondAttribute="trailing" constant="20" id="bIP-bg-2j0"/>
-                            <constraint firstItem="b5W-3S-8kF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="200" id="pW7-z9-RkL"/>
-                            <constraint firstItem="b5W-3S-8kF" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="zt2-0M-IOt"/>
-                            <constraint firstItem="b5W-3S-8kF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zuS-AC-5Xf"/>
+                            <constraint firstAttribute="trailing" secondItem="PqV-oK-vpE" secondAttribute="trailing" constant="20" id="4bc-JE-TBd"/>
+                            <constraint firstItem="PqV-oK-vpE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="7Jf-Fa-ChL"/>
+                            <constraint firstItem="PqV-oK-vpE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HG9-5g-qoP"/>
+                            <constraint firstItem="PqV-oK-vpE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nHP-wb-880"/>
+                            <constraint firstAttribute="bottom" secondItem="PqV-oK-vpE" secondAttribute="bottom" id="y6t-bn-w4h"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="vk" width="930" height="215"/>
+        <image name="launch" width="595" height="419"/>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

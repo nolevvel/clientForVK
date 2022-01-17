@@ -9,8 +9,9 @@ import UIKit
 
 final class FriendCell: UITableViewCell {
     
-    @IBOutlet var friendIcon: UIImageView!
+    @IBOutlet var friendIcon: AvatarImage!
     @IBOutlet var friendName: UILabel!
+   
     
     func configure(icon: UIImage, name: String) {
         self.friendIcon.image = icon

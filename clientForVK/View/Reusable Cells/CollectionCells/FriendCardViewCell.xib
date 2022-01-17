@@ -20,13 +20,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mc0-Xa-L21">
                         <rect key="frame" x="0.0" y="0.0" width="108" height="111"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6f3-Mi-ei1">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6f3-Mi-ei1">
                                 <rect key="frame" x="1" y="1" width="106" height="109"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AV-9b-3Zw">
+                                <rect key="frame" x="27" y="75" width="54.5" height="31"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="0"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2AV-9b-3Zw" firstAttribute="centerX" secondItem="mc0-Xa-L21" secondAttribute="centerX" id="6sj-nt-qNQ"/>
                             <constraint firstItem="6f3-Mi-ei1" firstAttribute="leading" secondItem="mc0-Xa-L21" secondAttribute="leading" constant="1" id="9nx-S0-cZR"/>
+                            <constraint firstAttribute="bottom" secondItem="2AV-9b-3Zw" secondAttribute="bottom" constant="5" id="E0c-W2-hMz"/>
                             <constraint firstAttribute="trailing" secondItem="6f3-Mi-ei1" secondAttribute="trailing" constant="1" id="JM3-3e-eRr"/>
                             <constraint firstItem="6f3-Mi-ei1" firstAttribute="top" secondItem="mc0-Xa-L21" secondAttribute="top" constant="1" id="gT5-0h-BH3"/>
                             <constraint firstAttribute="bottom" secondItem="6f3-Mi-ei1" secondAttribute="bottom" constant="1" id="uZW-kD-aJH"/>
@@ -44,13 +52,18 @@
             <size key="customSize" width="108" height="111"/>
             <connections>
                 <outlet property="friendPhoto" destination="6f3-Mi-ei1" id="W67-xm-gep"/>
+                <outlet property="likeButton" destination="2AV-9b-3Zw" id="1tT-Dw-dEl"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="114.17410714285714"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

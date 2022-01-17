@@ -8,8 +8,10 @@
 import UIKit
 
 class GroupCell: UITableViewCell {
-    @IBOutlet var groupIcon: UIImageView!
+    @IBOutlet var groupIcon: AvatarImage!
     @IBOutlet var groupName: UILabel!
+    
+    
     
     func configure(icon: UIImage, name: String) {
         self.groupIcon.image = icon

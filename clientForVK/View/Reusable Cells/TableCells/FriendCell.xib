@@ -17,35 +17,55 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcG-xT-ok2">
-                        <rect key="frame" x="51" y="11" width="41.5" height="21"/>
+                        <rect key="frame" x="63" y="11" width="41.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-qR-XJK">
-                        <rect key="frame" x="4" y="4" width="35" height="35"/>
-                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJ3-Hd-GpV" customClass="AvatarBackShadow" customModule="clientForVK" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="33" height="33"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-qR-XJK" customClass="AvatarImage" customModule="clientForVK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tcs-qR-XJK" secondAttribute="height" id="Yjy-xF-aYb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="tcs-qR-XJK" secondAttribute="height" id="Yjy-xF-aYb"/>
+                            <constraint firstAttribute="bottom" secondItem="tcs-qR-XJK" secondAttribute="bottom" id="MUg-0w-4zG"/>
+                            <constraint firstAttribute="trailing" secondItem="tcs-qR-XJK" secondAttribute="trailing" id="qOE-zF-MWC"/>
+                            <constraint firstItem="tcs-qR-XJK" firstAttribute="top" secondItem="nJ3-Hd-GpV" secondAttribute="top" id="sJj-LX-9gw"/>
+                            <constraint firstItem="tcs-qR-XJK" firstAttribute="leading" secondItem="nJ3-Hd-GpV" secondAttribute="leading" id="skg-MW-PGR"/>
                         </constraints>
-                    </imageView>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="tcs-qR-XJK" firstAttribute="leading" secondItem="DRW-Fg-pqe" secondAttribute="leading" constant="4" id="6am-Rw-WO3"/>
-                    <constraint firstItem="xcG-xT-ok2" firstAttribute="leading" secondItem="tcs-qR-XJK" secondAttribute="trailing" constant="12" id="LPr-vg-SD4"/>
-                    <constraint firstItem="tcs-qR-XJK" firstAttribute="top" secondItem="DRW-Fg-pqe" secondAttribute="top" constant="4" id="QOR-uL-CAv"/>
+                    <constraint firstItem="xcG-xT-ok2" firstAttribute="leading" secondItem="nJ3-Hd-GpV" secondAttribute="trailing" constant="20" id="ECv-s4-4Xv"/>
+                    <constraint firstItem="nJ3-Hd-GpV" firstAttribute="leading" secondItem="DRW-Fg-pqe" secondAttribute="leading" constant="10" id="Ioo-zs-qhf"/>
                     <constraint firstItem="xcG-xT-ok2" firstAttribute="centerY" secondItem="DRW-Fg-pqe" secondAttribute="centerY" id="Vvl-96-HlW"/>
-                    <constraint firstAttribute="bottom" secondItem="tcs-qR-XJK" secondAttribute="bottom" constant="4" id="hr0-IW-pJX"/>
+                    <constraint firstAttribute="bottom" secondItem="nJ3-Hd-GpV" secondAttribute="bottom" constant="5" id="dFS-Ki-Fo0"/>
+                    <constraint firstItem="nJ3-Hd-GpV" firstAttribute="top" secondItem="DRW-Fg-pqe" secondAttribute="top" constant="5" id="tpn-Sy-wPx"/>
                 </constraints>
             </tableViewCellContentView>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="friendCornerRadius">
+                    <real key="value" value="30"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="friendIcon" destination="tcs-qR-XJK" id="dub-Fx-2jG"/>
                 <outlet property="friendName" destination="xcG-xT-ok2" id="gd7-J5-MBF"/>
             </connections>
-            <point key="canvasLocation" x="139" y="37"/>
+            <point key="canvasLocation" x="137.68115942028987" y="35.825892857142854"/>
         </tableViewCell>
     </objects>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

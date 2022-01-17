@@ -15,6 +15,9 @@
 		66496EA4277912D700B8C8B7 /* FriendCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66496EA2277912D700B8C8B7 /* FriendCardViewCell.xib */; };
 		66496EA7277927E200B8C8B7 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66496EA6277927E200B8C8B7 /* FriendModel.swift */; };
 		66496EA9277927F200B8C8B7 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66496EA8277927F200B8C8B7 /* GroupModel.swift */; };
+		6675E6F4279423B8005F24F3 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675E6F3279423B8005F24F3 /* TestVC.swift */; };
+		6675E6F727942918005F24F3 /* UIBeziePath + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675E6F627942918005F24F3 /* UIBeziePath + Ext.swift */; };
+		6675E6FA27944DDC005F24F3 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6675E6F927944DDC005F24F3 /* AvatarView.swift */; };
 		66C21AED276A1A3300F4FD5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AEC276A1A3300F4FD5B /* AppDelegate.swift */; };
 		66C21AEF276A1A3300F4FD5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AEE276A1A3300F4FD5B /* SceneDelegate.swift */; };
 		66C21AF1276A1A3300F4FD5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C21AF0276A1A3300F4FD5B /* LoginViewController.swift */; };
@@ -36,6 +39,9 @@
 		66496EA2277912D700B8C8B7 /* FriendCardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCardViewCell.xib; sourceTree = "<group>"; };
 		66496EA6277927E200B8C8B7 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		66496EA8277927F200B8C8B7 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		6675E6F3279423B8005F24F3 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		6675E6F627942918005F24F3 /* UIBeziePath + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBeziePath + Ext.swift"; sourceTree = "<group>"; };
+		6675E6F927944DDC005F24F3 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		66C21AE9276A1A3300F4FD5B /* clientForVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clientForVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66C21AEC276A1A3300F4FD5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66C21AEE276A1A3300F4FD5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6675E6F5279428E9005F24F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6675E6F627942918005F24F3 /* UIBeziePath + Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6675E6F827944DC5005F24F3 /* Hacks */ = {
+			isa = PBXGroup;
+			children = (
+				6675E6F927944DDC005F24F3 /* AvatarView.swift */,
+			);
+			path = Hacks;
+			sourceTree = "<group>";
+		};
 		66C21AE0276A1A3300F4FD5B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,8 @@
 		66C21AEB276A1A3300F4FD5B /* clientForVK */ = {
 			isa = PBXGroup;
 			children = (
+				6675E6F827944DC5005F24F3 /* Hacks */,
+				6675E6F5279428E9005F24F3 /* Extensions */,
 				66496EA52779275400B8C8B7 /* Model */,
 				66EAAD64277257C80068B039 /* Source */,
 				66EAAD63277257A50068B039 /* ViewControllers */,
@@ -146,6 +170,7 @@
 				66EAAD672773DBCF0068B039 /* MyGroupsTableVC.swift */,
 				66C21AF0276A1A3300F4FD5B /* LoginViewController.swift */,
 				66EAAD652773DB540068B039 /* MyFriendsTableVC.swift */,
+				6675E6F3279423B8005F24F3 /* TestVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -237,13 +262,16 @@
 				66496E9E2778F6B800B8C8B7 /* GroupCell.swift in Sources */,
 				66C21AF1276A1A3300F4FD5B /* LoginViewController.swift in Sources */,
 				66EAAD6C2773DCCA0068B039 /* AddNewGroupTableVC.swift in Sources */,
+				6675E6F727942918005F24F3 /* UIBeziePath + Ext.swift in Sources */,
 				66C21AED276A1A3300F4FD5B /* AppDelegate.swift in Sources */,
 				66496EA9277927F200B8C8B7 /* GroupModel.swift in Sources */,
 				66496E9A2777D65300B8C8B7 /* FriendCell.swift in Sources */,
 				66EAAD682773DBCF0068B039 /* MyGroupsTableVC.swift in Sources */,
+				6675E6F4279423B8005F24F3 /* TestVC.swift in Sources */,
 				66496EA3277912D700B8C8B7 /* FriendCardViewCell.swift in Sources */,
 				66C21AEF276A1A3300F4FD5B /* SceneDelegate.swift in Sources */,
 				66EAAD6A2773DC710068B039 /* FriendCardCollectionVC.swift in Sources */,
+				6675E6FA27944DDC005F24F3 /* AvatarView.swift in Sources */,
 				66EAAD662773DB540068B039 /* MyFriendsTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
