@@ -9,33 +9,6 @@ import UIKit
 
 class FriendCardCollectionVC: UICollectionViewController, UICollectionViewDelegateFlowLayout{
     
-    @IBAction func setLike(sender: UIButton){
-        print("ggg")
-        if !sender.isSelected {
-            sender.isSelected = true
-        } else {
-            sender.isSelected = false
-        }
-        sender.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-        sender.setTitle("1", for: .selected)
-        sender.setImage(UIImage(systemName: "heart"), for: .normal)
-        sender.setTitle("0", for: .normal)
-        
-//        if sender.isSelected == false {
-//            sender.isSelected = true
-//
-//            let defaults = UserDefaults.standard
-//            defaults.set(true, forKey: "isSelected\(sender.tag)")
-//          }
-//          else {
-//            sender.isSelected = false
-//            let defaults = UserDefaults.standard
-//            defaults.set(false, forKey: "isSelected\(sender.tag)")
-//          }
-        
-        
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +19,6 @@ class FriendCardCollectionVC: UICollectionViewController, UICollectionViewDelega
         // Register cell classes
         self.collectionView.register(UINib(nibName: "FriendCardViewCell", bundle: nil), forCellWithReuseIdentifier: "friendCardViewCell")
         // self.navigationItem.title =
-        
         
         // Do any additional setup after loading the view.
     }
@@ -84,14 +56,7 @@ class FriendCardCollectionVC: UICollectionViewController, UICollectionViewDelega
         }
         let currentPhoto = userPhoto[indexPath.row]
         cell.configure(photo: currentPhoto)
-        cell.likeButton.addTarget(self, action: #selector(setLike(sender:)), for: .touchUpInside)
-        let tag = indexPath.row
-        cell.likeButton.tag = tag
-        var defaults = UserDefaults.standard
-        var state = defaults.bool(forKey: "isSelected\(tag)")
-        
-    
-        // Configure the cell
+      // Configure the cell
     
         return cell
     }
