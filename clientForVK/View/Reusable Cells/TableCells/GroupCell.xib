@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="43" id="nY1-3y-pnv" customClass="GroupCell" customModule="clientForVK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nY1-3y-pnv" id="eXb-rI-1Dj">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uib-wb-11s" customClass="AvatarBackShadow" customModule="clientForVK" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="33" height="33"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="alV-El-R4I" customClass="AvatarImage" customModule="clientForVK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="alV-El-R4I" secondAttribute="height" id="DPl-GI-pMy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="alV-El-R4I" secondAttribute="trailing" id="7wn-oY-0LJ"/>
+                            <constraint firstItem="alV-El-R4I" firstAttribute="top" secondItem="uib-wb-11s" secondAttribute="top" id="NOx-Gb-c9M"/>
+                            <constraint firstAttribute="bottom" secondItem="alV-El-R4I" secondAttribute="bottom" id="YAl-hC-siF"/>
+                            <constraint firstItem="alV-El-R4I" firstAttribute="leading" secondItem="uib-wb-11s" secondAttribute="leading" id="eQH-vd-Mb3"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvT-n4-rmV">
+                        <rect key="frame" x="63" y="11" width="41.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XvT-n4-rmV" firstAttribute="leading" secondItem="uib-wb-11s" secondAttribute="trailing" constant="20" id="0iq-k6-Fp5"/>
+                    <constraint firstItem="XvT-n4-rmV" firstAttribute="centerY" secondItem="eXb-rI-1Dj" secondAttribute="centerY" id="M4U-mF-DQI"/>
+                    <constraint firstItem="uib-wb-11s" firstAttribute="top" secondItem="eXb-rI-1Dj" secondAttribute="top" constant="5" id="RyH-g9-D9D"/>
+                    <constraint firstAttribute="bottom" secondItem="uib-wb-11s" secondAttribute="bottom" constant="5" id="WYB-vq-QaX"/>
+                    <constraint firstItem="uib-wb-11s" firstAttribute="leading" secondItem="eXb-rI-1Dj" secondAttribute="leading" constant="10" id="evA-5F-EzP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="groupCornerRadius">
+                    <real key="value" value="30"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="groupIcon" destination="alV-El-R4I" id="fhI-IQ-oVQ"/>
+                <outlet property="groupName" destination="XvT-n4-rmV" id="kd3-DB-9Ge"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="36.495535714285715"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
